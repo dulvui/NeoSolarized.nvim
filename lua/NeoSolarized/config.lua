@@ -24,12 +24,6 @@ M.options = {}
 
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
-  if M.options.transparent and M.options.style == "light" then
-    print(
-      "NeoSolarized does not support transparent mode in Light theme. Switching Back to dark theme with transparent mode.")
-    M.options.style = "dark"
-    M.options.transparent = true
-  end
 end
 
 function M.extend(options)
